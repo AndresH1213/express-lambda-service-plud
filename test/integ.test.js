@@ -5,7 +5,7 @@ test('Service return hello world', async () => {
     const response = await axios.get(process.env.SERVICE_ENDPOINT);
     expect(response.data).toBe('Hello world');
   } catch (e) {
-    // console.error(e);
-    // throw e;
+    console.error(e);
+    throw e;
   }
 });
